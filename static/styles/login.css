@@ -1,22 +1,26 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #004400; /* Dark green background */
+    background-color: #DAB59A; /* Background color matching the image */
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    position: relative;
 }
 
 .container {
     display: flex;
-    background-color: #fff;
+    background-color: #F5E8DC; /* Soft cream color */
     border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* 3D shadow effect */
+    max-width: 1200px;
+    width: 80%;
+    height: 70vh; /* Adjust the height to fit the desktop view */
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    max-width: 900px;
-    width: 100%;
+    position: relative;
+    z-index: 1; /* Places the container above other elements */
 }
 
 .login-box {
@@ -25,66 +29,73 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    text-align: left;
 }
 
 h1 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.wave {
-    display: inline-block;
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #333; /* Dark text for better readability */
 }
 
 p {
     margin: 10px 0;
+    color: #666; /* Slightly lighter text */
 }
 
 input[type="email"],
 input[type="password"] {
     width: 100%;
-    padding: 10px;
-    margin: 10px 0;
+    padding: 15px;
+    margin: 15px 0;
     border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-.apple-login {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #000;
-    color: #fff;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin: 10px 0;
-}
-.options {
-    display: flex;
-    justify-content: space-between;
-    margin: 10px 0;
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: #FFF;
 }
 
 .login-btn {
-    background-color: orange;
+    background-color: #FF7E33;
     color: white;
-    padding: 10px;
+    padding: 15px;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
     margin-top: 20px;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
 }
 
 .login-btn:hover {
-    background-color: darkorange;
+    background-color: #D97322;
 }
 
 .image-box {
     width: 50%;
-    background-image: url('landscape.jpg'); /* Replace with your image path */
     background-size: cover;
     background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+.image-box img {
+    width: 80%;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+    }
+    .image-box {
+        width: 100%;
+    }
+    .login-box {
+        width: 100%;
+        padding: 20px;
+    }
+}
