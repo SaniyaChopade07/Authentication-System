@@ -1,0 +1,107 @@
+/* Reset and global styling */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Cormorant Garamond', sans-serif;
+    box-sizing: border-box;
+}
+
+/* Enable smooth scrolling for anchor links */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Body styling */
+body {
+    background: #f0f8ff;  /* Light, pet-friendly background color */
+    color: #333;  /* Darker text color for readability */
+}
+
+/* Header section styling */
+#header {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/pet_background.jpg); /* Replace with your background image */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Container for centralizing content */
+.container {
+    position: absolute;
+    width: 100%;
+    padding: 10px 10%;
+    box-sizing: border-box;
+}
+
+/* Navigation styling */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Logo styling */
+.logo {
+    width: 250px;
+    margin-top: 20px;
+}
+
+/* Navigation list styling */
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+/* Navigation links styling */
+nav ul li a {
+    color: #333;  /* Dark text for better contrast */
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+}
+
+/* Underline effect on hover for navigation links */
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff6f61;  /* Pet-friendly, warm accent color */
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* Header text styling */
+.header-text {
+    margin-top: 20%;
+    font-size: 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Styling for the "Petfam" text */
+.header-text p {
+    color: #ff6f61;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Styling for the welcome message */
+.header-text h1 {
+    font-size: 60px;
+    margin-top: 20px;
+    color: #333;
+}
