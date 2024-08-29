@@ -11,10 +11,19 @@
         <div class="login-box">
             <h1>Welcome back</h1>
             <p>Please enter your details.</p>
+<<<<<<< HEAD
             <input type="email" placeholder="Email">
             <input type="password" placeholder="Password">
             <button class="login-btn">Log in</button>
             <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+=======
+            <form method="POST"> <!-- Add form tag with POST method -->
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <button type="submit" class="login-btn">Log in</button> <!-- Change button type to submit -->
+            </form>
+            <p>Don't have an account? <a href="/register">Sign Up</a></p>
+>>>>>>> ff65292f64a583765bc5a7a4cbef6bb78ed427b7
         </div>
         <div class="image-box">
             <img src="../static/images/login_bg.jpeg" alt="Landscape Image">

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import UserMixin
 from extensions import db, bcrypt
@@ -93,3 +94,15 @@ class LoginCompany(FlaskForm):
     cp_username = StringField("Username", validators=[InputRequired(), Length(min=2, max=20)], render_kw={"placeholder": "Username"})
     cp_password = PasswordField("Password", validators=[InputRequired(), Length(min=2, max=20)], render_kw={"placeholder": "Password"})
     cp_submit = SubmitField("Login as Company")
+=======
+# models.py
+from extensions import db
+
+class User(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(150), nullable=False, unique=True)
+    email = db.Column(db.String(150), nullable=False, unique=True)
+    phone_number = db.Column(db.String(20), nullable=False)
+    occupation = db.Column(db.String(100), nullable=False)
+    password = db.Column(db.String(150), nullable=False)
+>>>>>>> ff65292f64a583765bc5a7a4cbef6bb78ed427b7
