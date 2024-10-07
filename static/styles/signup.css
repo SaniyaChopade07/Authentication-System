@@ -5,8 +5,10 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    font-family: Arial, sans-serif; /* Matching the font with login page */
-    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    background-color: #DAB59A; /* Consistent background color */
+    padding: 20px; /* Added padding to avoid cutting off on smaller screens */
+    box-sizing: border-box;
 }
 
 /* Style for the container */
@@ -14,6 +16,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #F5E8DC; /* Soft cream color */
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* 3D shadow effect */
+    max-width: 1200px;
+    width: 90%; /* Slightly reduced width for better mobile handling */
+    padding: 30px;
+    margin: auto;
+    flex-wrap: wrap; /* Allows items to stack on smaller screens */
 }
 
 /* Style for the sign-up form container */
@@ -21,19 +31,21 @@ body {
     background-color: #ffffff;
     padding: 30px 50px;
     border-radius: 10px;
-    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2); /* Enhanced 3D shadow effect */
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2); /* Consistent shadow effect */
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 350px; /* Rectangular shape similar to login page */
+    width: 100%; /* Adjusts to fit different screen sizes */
+    max-width: 400px; /* Maintains a manageable width on large screens */
+    margin-bottom: 20px;
 }
 
 /* Style for the heading */
 h1 {
     text-align: center;
-    font-size: 24px;
+    font-size: 28px; /* Consistent with login page */
     margin-bottom: 20px;
-    font-family: Arial, sans-serif; /* Matching the font with login page */
+    color: #333; /* Dark text for readability */
 }
 
 /* Style for form elements */
@@ -41,37 +53,86 @@ input[type="text"],
 input[type="email"],
 input[type="password"] {
     width: 100%;
-    padding: 10px;
-    margin: 10px 0;
+    padding: 15px;
+    margin: 15px 0;
     font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border: 1px solid #ddd; /* Lighter border */
+    border-radius: 10px;
+    background-color: #FFF;
 }
 
 /* Style for the sign-up button */
 .signup-btn {
     width: 100%;
-    padding: 10px;
+    padding: 15px;
     font-size: 18px;
-    color: #ffffff;
-    background-color: #4CAF50;
+    color: white;
+    background-color: #FF7E33; /* Button color consistent with login */
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
     margin-top: 20px;
+    transition: background-color 0.3s ease;
 }
 
 .signup-btn:hover {
-    background-color: #45a049;
+    background-color: #D97322; /* Hover effect consistent with login */
 }
 
 /* Style for the image container */
 .image-box {
-    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
 }
 
 .image-box img {
-    width: 350px; /* Matching the form width for consistency */
+    width: 100%; /* Fully responsive image */
     height: auto;
     border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Consistent shadow effect */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stacks form and image vertically */
+        padding: 20px;
+        height: auto; /* Auto height to avoid cutting content */
+    }
+    
+    .signup-box {
+        width: 100%;
+        max-width: none;
+        padding: 20px;
+    }
+
+    .image-box {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .signup-box {
+        padding: 15px; /* Reduced padding for very small screens */
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+        padding: 10px; /* Slightly smaller padding for inputs */
+        font-size: 14px;
+    }
+
+    .signup-btn {
+        padding: 12px;
+        font-size: 16px; /* Slightly reduced button size for small screens */
+    }
+
+    h1 {
+        font-size: 24px; /* Adjusted font size for smaller screens */
+    }
 }
